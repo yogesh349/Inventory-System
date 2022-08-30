@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Home\Aboutcontroller;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\PortfolioController;
+use App\Http\Controllers\Pos\UnitController;
 use App\Http\Controllers\SupplierController;
 use Illuminate\Support\Facades\Route;
 
@@ -89,7 +90,17 @@ Route::controller(CustomerController::class)->group(function(){
     Route::get('edit/customer/{id}','editCustomer')->name('edit.customer');
     Route::post('update/customer/{id}','updateCustomer')->name('update.customer');
     Route::get('delete/ccustomer/{id}','deleteCustomer')->name('delete.customer');
-    
+});
+
+Route::controller(UnitController::class)->group(function(){
+    Route::get('unit/all','unitAll')->name('unit.all');
+    Route::get('unit/add','unitAdd')->name('add.unit');
+    Route::post('store/unit','storeUnit')->name('store.unit');
+    Route::get('edit/unit/{id}','editUnit')->name('edit.unit');
+    Route::post('update/unit/{id}','updateUnit')->name('update.unit');
+    Route::get('delete/unit/{id}','deleteUnit')->name('delete.unit');
     
 
+
 });
+
