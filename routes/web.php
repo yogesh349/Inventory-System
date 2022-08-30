@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\Aboutcontroller;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\PortfolioController;
+use App\Http\Controllers\SupplierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,5 +66,18 @@ Route::controller(PortfolioController::class)->group(function(){
     Route::get('add/portfolio','addPortfolio')->name('add.portfolio');
     Route::post('store/portfolio','storePortfolio')->name('store.portfolio');
     
+});
+
+Route::controller(SupplierController::class)->group(function(){
+
+    Route::get('supplier/all','supplierAll')->name('all.supplier');
+    Route::get('Add/supplier','addSupplier')->name('add.supplier');
+    Route::post('store/supplier','storeSupplier')->name('store.supplier');
+    Route::get('edit/supplier/{id}','editSupplier')->name('edit.supplier');
+    Route::post('update/supplier/{id}','updateSupplier')->name('update.supplier');
+    Route::get('delete/supplier/{id}','deleteSupplier')->name('delete.supplier');
+   
+   
+
 });
 
