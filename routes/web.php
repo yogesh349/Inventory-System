@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Home\Aboutcontroller;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\PortfolioController;
@@ -81,3 +82,14 @@ Route::controller(SupplierController::class)->group(function(){
 
 });
 
+Route::controller(CustomerController::class)->group(function(){
+    Route::get('customer/all','customerAll')->name('customer.all');
+    Route::get('customer/add','customerAdd')->name('add.customer');
+    Route::post('store/customer','storeCustomer')->name('store.customer');
+    Route::get('edit/customer/{id}','editCustomer')->name('edit.customer');
+    Route::post('update/customer/{id}','updateCustomer')->name('update.customer');
+    Route::get('delete/ccustomer/{id}','deleteCustomer')->name('delete.customer');
+    
+    
+
+});
