@@ -5,6 +5,10 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Home\Aboutcontroller;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\PortfolioController;
+use App\Http\Controllers\Pos\CategoryController;
+use App\Http\Controllers\Pos\DefaultController;
+use App\Http\Controllers\Pos\ProductController;
+use App\Http\Controllers\Pos\PurchaseController;
 use App\Http\Controllers\Pos\UnitController;
 use App\Http\Controllers\SupplierController;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +30,8 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('admin.index');
-})->middleware(['auth','verified'])->name('dashboard');
+});
+// ->middleware(['auth','verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
@@ -99,8 +104,43 @@ Route::controller(UnitController::class)->group(function(){
     Route::get('edit/unit/{id}','editUnit')->name('edit.unit');
     Route::post('update/unit/{id}','updateUnit')->name('update.unit');
     Route::get('delete/unit/{id}','deleteUnit')->name('delete.unit');
+});
+
+Route::controller(CategoryController::class)->group(function(){
+    Route::get('category/all','categoryAll')->name('category.all');
+    Route::get('category/add','categoryAdd')->name('add.category');
+    Route::post('store/category','storeCategory')->name('store.category');
+    Route::get('edit/category/{id}','editCategory')->name('edit.category');
+    Route::post('update/category/{id}','updateCategory')->name('update.category');
+    Route::get('delete/category/{id}','deleteCategory')->name('delete.category');
+});
+
+Route::controller(ProductController::class)->group(function(){
+    Route::get('product/all','productAll')->name('product.all');
+    Route::get('product/add','productAdd')->name('add.product');
+    Route::post('store/product','storeProduct')->name('store.product');
+    Route::get('edit/product/{id}','editProduct')->name('edit.product');
+    Route::post('update/product/{id}','updateProduct')->name('update.product');
+    Route::get('delete/product/{id}','deleteProduct')->name('delete.product');
+});
+
+Route::controller(PurchaseController::class)->group(function(){
+    Route::get('purchase/all','purchaseAll')->name('purchase.all');
+    Route::get('purchase/add','purchaseAdd')->name('add.purchase');
+    Route::post('store/purchase','storePurchase')->name('purchase.store');
+    Route::get('delete/purchase/{id}','deletePurchase')->name('delete.purchase');
+    Route::get('purchase/pending','purchasePending')->name('purchase.pending');
+    Route::get('purchase/approve/{id}','approvePurchase')->name('approve.purchase');
     
+});
+
+
+// Default Controller
+Route::controller(DefaultController::class)->group(function(){
+Route::get('get-category/','getCategory')->name('get-category');
+Route::get('get-products/','getProduct')->name('get-products');
 
 
 });
+
 

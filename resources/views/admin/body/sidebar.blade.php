@@ -31,48 +31,27 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Home Slide Setup</span>
+                        <span>Manage Category</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                        
-                        <li><a href="{{route('home.slide')}}">Home Slide</a></li>
-                    </ul>
-                </li>
-
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>About Page Setup</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">  
-                        <li><a href="{{route('about.page')}}">About Page</a></li>
-                        <li><a href="{{route('about.multiImage')}}">About MultiImage Page</a></li>
-                        <li><a href="{{route('all.multiImage')}}">All MultiImage Page</a></li>
+                        <li><a href="">All Category</a></li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
-                        <span>Portfolio Page Setup</span>
+                        <span>Manage Foods</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">  
-                        <li><a href="{{route('all.portfolio')}}">All Portfolio</a></li>
-                        <li><a href="{{route('add.portfolio')}}">Add Portfolio</a></li>
+                    <ul class="sub-menu" aria-expanded="false">
+                       
+                        <li><a href="">All Foods</a></li>
                     </ul>
                 </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Blog Category</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">  
-                        <li><a href="{{route('all.portfolio')}}">All Blog Category</a></li>
-                        <li><a href="{{route('add.portfolio')}}">Add Blog Category</a></li>
-                    </ul>
-                </li>
+
+
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -103,6 +82,51 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">  
                         <li><a href="{{route('unit.all')}}">All Units</a></li>
+                    
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Manage Category</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">  
+                        <li><a href="{{route('category.all')}}">All Category</a></li>
+                    
+                    </ul>
+                </li>
+
+                
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Manage Products</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">  
+                        <li><a href="{{route('product.all')}}">All Products</a></li>
+                    
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Manage Purchase</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">  
+                        <li><a href="{{route('purchase.all')}}">All Purchase</a></li>
+                    
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Manage Purchase</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">  
+                        <li><a href="{{route('purchase.pending')}}">Approval Purchase</a></li>
                     
                     </ul>
                 </li>
